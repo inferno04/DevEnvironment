@@ -1,0 +1,23 @@
+ 0. Get MELPA
+==============
+	http://melpa.org/#/getting-started
+	Follow the big blob under 'Installing' - not the little one
+
+ 1. Run Emacs
+==============
+	This will set up the package manager with the appropriate packages from MELPA
+
+ 2. Install Good Packages
+==========================
+	M-x package-install
+		better-defaults
+		ido-ubiquitous
+		smex
+
+ 3. Initialize smex
+====================
+	https://github.com/nonsequitur/smex#get-started
+	Append to .emacs the smex init stuff
+
+		( smex-initialize )                    ;; Initialize smex
+		( global-set-key ( kbd "M-x" ) 'smex ) ;; This will rebind M-x, but that's okay
