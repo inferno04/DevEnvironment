@@ -146,7 +146,7 @@
     'emacs-lisp-mode-hook
     ( lambda ()
       ( font-lock-add-keywords nil
-        '(( "\\(/\\*\\**\s*TODO\s*:.*$\\)" 1 todo-face t ))
+        '(( "\\(;*\s*TODO\s*:.*$\\)" 1 todo-face t ))
       )
     )
   )
