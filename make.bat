@@ -5,6 +5,12 @@
 
 @echo off
 
+setlocal
+
+set compiler=cl.exe
+set executable=program.exe
+set source=main.cpp
+
 :: Argument / Parameter evaluation
 if "%~1"==""      ( goto build )
 if "%~1"=="clean" ( goto clean )
@@ -14,10 +20,6 @@ if "%~1"=="run"   ( goto  run  )
 
 :: Make ( Build )
 :build
-
-set compiler=cl.exe
-set executable=program.exe
-set source=main.cpp
 
 %compiler% %source% /Fe%executable%
 
@@ -55,3 +57,5 @@ goto end
 
 :: Make ( End )
 :end
+
+endlocal
